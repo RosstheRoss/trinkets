@@ -1,4 +1,8 @@
 <script lang="ts">
+	import { registerSW } from 'virtual:pwa-register'
+	import { pwaInfo } from 'virtual:pwa-info'; 
+	import { onMount } from 'svelte'
+
 	import '../app.postcss';
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
 
@@ -6,7 +10,30 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+
+	onMount(async () => {
+    if (pwaInfo) {
+      registerSW({
+        immediate: true,
+        onRegistered(r) {
+          console.log(`SW Registered: ${r}`)
+        },
+        onRegisterError(error) {
+          console.log('SW registration error', error)
+        },
+		onOfflineReady() {
+			console.log('SW Offline Ready')
+		}
+      })
+    }
+  })
+  	
+	$: webManifestLink = pwaInfo ? pwaInfo.webManifest.linkTag : '' 
 </script>
+
+<svelte:head> 
+ 	{@html webManifestLink} 
+</svelte:head>
 
 <!-- App Shell -->
 <AppShell>
