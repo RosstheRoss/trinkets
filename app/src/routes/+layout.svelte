@@ -7,18 +7,18 @@
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
 
 	// Floating UI for Popups
-	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
-	import { storePopup } from '@skeletonlabs/skeleton';
-	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+	// import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
+	// import { storePopup } from '@skeletonlabs/skeleton';
+	// storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
 	onMount(async () => {
     if (pwaInfo) {
       registerSW({
         immediate: true,
-        onRegistered(r) {
+        onRegistered(r: ServiceWorkerRegistration) {
           console.log(`SW Registered: ${r}`)
         },
-        onRegisterError(error) {
+        onRegisterError(error: Error) {
           console.log('SW registration error', error)
         },
 		onOfflineReady() {
