@@ -1,5 +1,0 @@
-{
-    "yaml.schemas": {
-        "https://json.schemastore.org/github-workflow.json": "file:///home/user/src/misc/portfolio-page/.github/workflows/deploy.yaml"
-    }
-}
