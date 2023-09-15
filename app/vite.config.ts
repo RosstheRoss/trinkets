@@ -27,9 +27,12 @@ export default defineConfig({
           {
             src: '/favicon.svg',
             sizes: 'any',
-            type: 'image/svg+xml'
+            type: 'image/svg+xml',
+            purpose: 'any maskable'
           }
-        ]
+        ],
+        id: "/",
+        theme_color: '#000000',
       },
       registerType: 'autoUpdate',
       workbox: {
