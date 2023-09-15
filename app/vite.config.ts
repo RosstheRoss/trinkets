@@ -33,7 +33,7 @@ export default defineConfig({
       },
       registerType: 'autoUpdate',
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg}'],
+        globPatterns: [ 'client/**/*.{js,css,html,svg}' ],
         cleanupOutdatedCaches: true,
       }
     })
