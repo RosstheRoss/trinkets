@@ -27,8 +27,12 @@ export default defineConfig({
           {
             src: '/favicon.svg',
             sizes: 'any',
-            type: 'image/svg+xml',
-            purpose: 'any maskable'
+            type: 'image/svg+xml'
+          },
+          {
+            src: '/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
           }
         ],
         id: "/",
