@@ -15,7 +15,7 @@
 
   onMount(async () => {
     worker = new (await import('$lib/ts/crc32.worker?worker')).default();
-    worker.onmessage = (e: MessageEvent<Number>) => {
+    worker.onmessage = (e: MessageEvent<number>) => {
       disableInput = false;
       console.log(e.data);
     };

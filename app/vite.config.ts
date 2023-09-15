@@ -36,13 +36,13 @@ export default defineConfig({
             type: 'image/png'
           }
         ],
-        id: "/",
-        theme_color: '#000000',
+        id: '/',
+        theme_color: '#000000'
       },
       registerType: 'autoUpdate',
       workbox: {
-        globPatterns: [ 'client/**/*.{js,css,html,svg}' ],
-        cleanupOutdatedCaches: true,
+        globPatterns: ['client/**/*.{js,css,html,svg}'],
+        cleanupOutdatedCaches: true
       }
     })
   ]
