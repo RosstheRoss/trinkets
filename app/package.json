@@ -18,6 +18,7 @@
     "@typescript-eslint/parser": "^6.7.0",
     "@vite-pwa/sveltekit": "^0.2.7",
     "autoprefixer": "10.4.15",
+    "crc": "^4.3.2",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-svelte": "^2.33.1",
@@ -36,10 +37,10 @@
   },
   "private": true,
   "scripts": {
-    "build": "vite build && mv .svelte-kit/output/server/sw.js.map .svelte-kit/output/server/workbox-*.map build/",
+    "build": "vite build && cp .svelte-kit/output/server/sw.js.map .svelte-kit/output/server/workbox-*.map build/",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "dev": "vite dev",
+    "dev": "vite dev && rm -rf dev-dist",
     "format": "prettier --write .",
     "lint": "prettier --check . && eslint .",
     "preview": "vite preview"

@@ -8,13 +8,34 @@ export default defineConfig({
     sourcemap: true
   },
   css: {
-    devSourcemap: true,
+    devSourcemap: true
   },
   plugins: [
     sveltekit(),
     purgeCss(),
     SvelteKitPWA({
-      registerType: 'autoUpdate'
+      devOptions: {
+        enabled: true,
+        type: 'module'
+      },
+      manifest: {
+        name: "RossTheRoss' Personal Tools",
+        short_name: 'Dumping Ground',
+        display: 'fullscreen',
+        display_override: ['window-controls-overlay', 'standalone', 'minimal-ui'],
+        icons: [
+          {
+            src: '/favicon.svg',
+            sizes: 'any',
+            type: 'image/svg+xml'
+          }
+        ]
+      },
+      registerType: 'autoUpdate',
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,svg}'],
+        cleanupOutdatedCaches: true,
+      }
     })
   ]
 });
