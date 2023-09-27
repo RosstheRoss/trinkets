@@ -14,5 +14,13 @@
     "sync-deps": "syncpack",
     "fix-deps": "syncpack fix-mismatches",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "overrides": {
+    "sourcemap-codec": "@jridgewell/sourcemap-codec"
+  },
+  "pnpm": {
+    "overrides": {
+      "sourcemap-codec": "npm:@jridgewell/sourcemap-codec"
+    }
   }
 }

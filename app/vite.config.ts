@@ -20,7 +20,7 @@ export default defineConfig({
       },
       manifest: {
         name: "RossTheRoss' Personal Tools",
-        short_name: 'Dumping Ground',
+        short_name: 'Random Dumping Ground',
         display: 'fullscreen',
         display_override: ['window-controls-overlay', 'standalone', 'minimal-ui'],
         icons: [

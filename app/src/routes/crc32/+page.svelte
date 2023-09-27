@@ -14,7 +14,7 @@
   }
 
   onMount(async () => {
-    worker = new (await import('$lib/ts/crc32.worker?worker')).default();
+    worker = new Worker(new URL('$lib/ts/crc32.worker.ts', import.meta.url), { type: 'module' });
     worker.onmessage = (e: MessageEvent<number>) => {
       disableInput = false;
       console.log(e.data);
@@ -42,9 +42,9 @@
       </FileDropzone>
       <br />
       <noscript>
-        <button type="submit" class="btn variant-filled"
-          >After adding a file, click to submit! (Not yet implemented)</button
-        >
+        <button type="submit" class="btn variant-filled">
+          After adding a file, click to submit! (Not yet implemented)
+        </button>
       </noscript>
       {#if disableInput}
         <h3 class="h3">Calculating the checksum, this may take time!</h3> <br />
