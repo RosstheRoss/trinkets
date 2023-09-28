@@ -1,5 +1,5 @@
 <script lang="ts">
-    import saveFile from '$lib/ts/download';
+  import saveFile from '$lib/ts/download';
   import type { TruncateRequest, TruncateResponse } from '$lib/types/truncate-worker';
   import { FileDropzone, ProgressBar } from '@skeletonlabs/skeleton';
   import { onMount } from 'svelte';
@@ -16,7 +16,7 @@
     originalName = files[0].name;
     worker.postMessage({
       file: files[0],
-      size: truncateTo,
+      size: truncateTo
     } as TruncateRequest);
     form.reset();
     truncateTo = 1;
@@ -27,7 +27,6 @@
     worker.onmessage = (e: MessageEvent<TruncateResponse>) => {
       disableInput = false;
       saveFile(e.data.file, `trunc-${originalName}`);
-
     };
   });
 </script>
@@ -56,8 +55,14 @@
       <br />
       <label class="label">
         <span>Truncate up to... (in bytes)</span>
-        <input class="input" type="number" name="truncateTo" bind:value={truncateTo} min="1" required />
-
+        <input
+          class="input"
+          type="number"
+          name="truncateTo"
+          bind:value={truncateTo}
+          min="1"
+          required
+        />
       </label>
       <br />
       <noscript>

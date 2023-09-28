@@ -42,6 +42,7 @@
 </script>
 
 <svelte:head>
+  <!-- eslint-disable-next-line svelte/no-at-html-tags VitePWA can probably be trusted -->
   {@html webManifestLink}
 </svelte:head>
 
