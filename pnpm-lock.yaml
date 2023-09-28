@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  sourcemap-codec: '@jridgewell/sourcemap-codec'
+  sourcemap-codec: npm:@jridgewell/sourcemap-codec
 
 importers:
 
@@ -28,8 +28,8 @@ importers:
         specifier: 2.2.0
         version: 2.2.0(svelte@4.2.1)
       '@skeletonlabs/tw-plugin':
-        specifier: 0.2.0
-        version: 0.2.0(tailwindcss@3.3.3)
+        specifier: 0.2.1
+        version: 0.2.1(tailwindcss@3.3.3)
       '@sveltejs/adapter-auto':
         specifier: ^2.1.0
         version: 2.1.0(@sveltejs/kit@1.25.1)
@@ -1744,8 +1744,8 @@ packages:
       svelte: 4.2.1
     dev: true
 
-  /@skeletonlabs/tw-plugin@0.2.0(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-Mtao12JMrmlYvhv9AfvKNBd5qz+v5MImMG9tri++/4FUORAmzB3F3Qq9+ukfdDtoPT/+Q1CRPn1CL05gDxsKSQ==}
+  /@skeletonlabs/tw-plugin@0.2.1(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-F4Eq/0bxUOlhzgxU6zQJCMSe+cYJcN8HyjuG46mspNuOlSEc2CWgkjqgO/bHwkDBaQb66eQZsEFsfE11cd/PuA==}
     peerDependencies:
       tailwindcss: '>=3.0.0'
     dependencies:
@@ -2277,7 +2277,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001541
-      electron-to-chromium: 1.4.534
+      electron-to-chromium: 1.4.535
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.0)
     dev: true
@@ -2617,8 +2617,8 @@ packages:
       jake: 10.8.7
     dev: true
 
-  /electron-to-chromium@1.4.534:
-    resolution: {integrity: sha512-ikY7wAMtMt3jTnHsHG0YLl4MKJiKz2tgidenGSNgwUX2StBLNZ8VCxflD9tZK/ceTs4j8gDC9+6LQQ6iGkK04g==}
+  /electron-to-chromium@1.4.535:
+    resolution: {integrity: sha512-4548PpR4S5X5dlvX8NUIw0njH7btQtBoJWcgzpq7n2F9NQ5gMXOPP/6p6iVx6+YT3FVioNhEGa14WJj1k+2SfA==}
     dev: true
 
   /enquirer@2.4.1:
@@ -3634,7 +3634,7 @@ packages:
   /magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
-      sourcemap-codec: link:@jridgewell/sourcemap-codec
+      sourcemap-codec: /@jridgewell/sourcemap-codec@1.4.15
     dev: true
 
   /magic-string@0.27.0:
