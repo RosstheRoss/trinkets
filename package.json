@@ -20,7 +20,7 @@
   },
   "pnpm": {
     "overrides": {
-      "sourcemap-codec": "npm:@jridgewell/sourcemap-codec"
+      "sourcemap-codec": "@jridgewell/sourcemap-codec"
     }
   }
 }

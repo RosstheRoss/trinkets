@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: 
+    branches:
     - 'master'
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         run: pnpm -r install
 
 
-      - name: build
+      - name: Build the site
         run: pnpm -F website build
 
 

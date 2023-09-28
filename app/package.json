@@ -37,9 +37,6 @@
     "vite-plugin-pwa": "^0.16.5",
     "vite-plugin-tailwind-purgecss": "0.1.3"
   },
-  "overrides": {
-    "sourcemap-codec": "@jridgewell/sourcemap-codec"
-  },
   "private": true,
   "scripts": {
     "build": "vite build && cp .svelte-kit/output/server/sw.js.map .svelte-kit/output/server/workbox-*.map build/",
