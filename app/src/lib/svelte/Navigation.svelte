@@ -21,7 +21,6 @@
   <AppRailAnchor
     href="/truncate"
     selected={$page.url.pathname === '/truncate'}
-    data-sveltekit-reload
     on:click={drawerClose}
   >
     <svelte:fragment slot="lead">

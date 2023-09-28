@@ -7,5 +7,3 @@ onmessage = async (message: MessageEvent<TruncateRequest>) => {
   const truncated = buffer.slice(0, message.data.size);
   postMessage({ file: truncated } as TruncateResponse);
 };
-
-console.log('Worker successfully loaded!');
