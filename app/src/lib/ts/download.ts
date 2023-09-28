@@ -19,10 +19,11 @@ export default async function saveFile(blob: ArrayBuffer, suggestedName: string 
       const writable = await handle.createWritable();
       await writable.write(blob);
       await writable.close();
+      return;
     } catch (err: unknown) {
       // TypeScript
       if ((err as Error)?.name !== 'AbortError') {
-        console.error(err);
+        return Promise.reject(err);
       }
     }
   } else {
@@ -30,5 +31,7 @@ export default async function saveFile(blob: ArrayBuffer, suggestedName: string 
     anchor.download = suggestedName ?? 'truncated';
     anchor.href = URL.createObjectURL(new Blob([blob]));
     anchor.click();
+    URL.revokeObjectURL(anchor.href);
+    document.body.removeChild(anchor);
   }
 }

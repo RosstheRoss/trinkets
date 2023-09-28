@@ -1,20 +1,20 @@
 <script lang="ts">
-  import { useRegisterSW } from 'virtual:pwa-register/svelte';
-  import { pwaInfo } from 'virtual:pwa-info';
-  import { onMount } from 'svelte';
-  import {
-    AppShell,
-    AppBar,
-    getDrawerStore,
-    getToastStore,
-    initializeStores,
-    Toast,
-    Drawer
-  } from '@skeletonlabs/skeleton';
-
   import Navigation from '$lib/svelte/Navigation.svelte';
-
+  import Icon from '@iconify/svelte';
+  import {
+      AppBar,
+      AppShell,
+      Drawer,
+      Toast,
+      getDrawerStore,
+      getToastStore,
+      initializeStores
+  } from '@skeletonlabs/skeleton';
+  import { onMount } from 'svelte';
+  import { pwaInfo } from 'virtual:pwa-info';
+  import { useRegisterSW } from 'virtual:pwa-register/svelte';
   import '../app.postcss';
+
   // Floating UI for Popups
   // import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
   // import { storePopup } from '@skeletonlabs/skeleton';
@@ -75,13 +75,7 @@
       <svelte:fragment slot="lead">
         <div class="flex items-center">
           <button class="lg:hidden btn btn-sm mr-4" on:click={drawerOpen}>
-            <span>
-              <svg viewBox="0 0 100 80" class="fill-token w-4 h-4">
-                <rect width="100" height="20" />
-                <rect y="30" width="100" height="20" />
-                <rect y="60" width="100" height="20" />
-              </svg>
-            </span>
+            <Icon icon="carbon:menu" width=25 />
           </button>
           <strong class="text-xl uppercase">A!</strong>
         </div>

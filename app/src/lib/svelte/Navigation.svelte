@@ -1,7 +1,7 @@
 <script lang="ts">
+  import { page } from '$app/stores';
   import Icon from '@iconify/svelte';
   import { AppRail, AppRailAnchor, getDrawerStore } from '@skeletonlabs/skeleton';
-  import { page } from '$app/stores';
 
   const drawerStore = getDrawerStore();
 
