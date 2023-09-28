@@ -10,15 +10,14 @@
   }
 </script>
 
-<AppRail data-sveltekit-reload>
-  <svelte:fragment slot="lead">
-    <AppRailAnchor href="/" selected={$page.url.pathname === '/'} on:click={drawerClose}>
-      <svelte:fragment slot="lead">
-        <Icon icon="carbon:home" width="35" />
-      </svelte:fragment>
-      Home!
-    </AppRailAnchor>
-  </svelte:fragment>
+<AppRail>
+  <svelte:fragment slot="lead"></svelte:fragment>
+  <AppRailAnchor href="/" selected={$page.url.pathname === '/'} on:click={drawerClose}>
+    <svelte:fragment slot="lead">
+      <Icon icon="carbon:home" width="35" />
+    </svelte:fragment>
+    Home!
+  </AppRailAnchor>
   <AppRailAnchor
     href="/truncate"
     selected={$page.url.pathname === '/truncate'}
@@ -35,11 +34,12 @@
       href="https://github.com/rosstheross/rosstheross.github.io"
       rel="noreferrer"
       target="_blank"
+      on:click={drawerClose}
     >
       <svelte:fragment slot="lead">
         <Icon icon="carbon:logo-github" width="35" />
       </svelte:fragment>
-      Source
+      Source!
     </AppRailAnchor>
   </svelte:fragment>
 </AppRail>

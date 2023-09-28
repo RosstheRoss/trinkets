@@ -77,7 +77,7 @@
           <button class="lg:hidden btn btn-sm mr-4" on:click={drawerOpen}>
             <Icon icon="carbon:menu" width=25 />
           </button>
-          <strong class="text-xl uppercase">A!</strong>
+          <strong class="text-xl uppercase">Nothing</strong>
         </div>
       </svelte:fragment>
     </AppBar>
