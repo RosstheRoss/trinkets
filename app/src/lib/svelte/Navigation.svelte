@@ -33,7 +33,6 @@
     <AppRailAnchor
       href="https://github.com/rosstheross/rosstheross.github.io"
       rel="noreferrer"
-      target="_blank"
       on:click={drawerClose}
     >
       <svelte:fragment slot="lead">
