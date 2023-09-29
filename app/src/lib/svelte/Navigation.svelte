@@ -15,7 +15,9 @@
     drawerStore.close()
   }
 
-  // Hamburgers
+  /**
+   * If the menu prop is true, then the close menu button will be rendered.
+   */
   export let menu = false
 </script>
 
@@ -30,7 +32,12 @@
       </AppRailAnchor>
     {/if}
   </svelte:fragment>
-  <AppRailAnchor href="/" selected={$page.url.pathname === '/'} on:click={drawerClose} title="Home">
+  <AppRailAnchor
+    href="/"
+    selected={$page.url.pathname === '/'}
+    on:click={drawerClose}
+    title="Homepage"
+  >
     <svelte:fragment slot="lead">
       <Icon icon={homeIcon} width="35" />
     </svelte:fragment>
@@ -40,7 +47,7 @@
     href="/truncate"
     selected={$page.url.pathname === '/truncate'}
     on:click={drawerClose}
-    title="Truncate"
+    title="Truncate Files"
   >
     <svelte:fragment slot="lead">
       <Icon icon={pageBreak} width="35" />
@@ -52,7 +59,7 @@
       href="https://github.com/rosstheross/rosstheross.github.io"
       rel="noreferrer"
       on:click={drawerClose}
-      title=""
+      title="Source Code"
     >
       <svelte:fragment slot="lead">
         <Icon icon={logoGithub} width="35" />
