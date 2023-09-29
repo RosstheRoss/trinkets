@@ -43,7 +43,7 @@
 
 <div class="container h-full mx-auto flex justify-center items-center">
   <div class="space-y-10 text-center flex flex-col items-center">
-    <form bind:this={form} on:submit|preventDefault={onUpload} method="POST" action="?/TODO">
+    <form bind:this={form} on:submit|preventDefault={onUpload} method="POST" action="?/TODO" enctype="multipart/form-data">
       <noscript>
         <h3 class="h3">You need JavaScript to use this page, for now ;)</h3>
         <br />
