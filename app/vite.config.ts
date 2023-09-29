@@ -1,14 +1,14 @@
-import { purgeCss } from 'vite-plugin-tailwind-purgecss';
-import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
-import { SvelteKitPWA } from '@vite-pwa/sveltekit';
+import { purgeCss } from 'vite-plugin-tailwind-purgecss'
+import { sveltekit } from '@sveltejs/kit/vite'
+import { defineConfig } from 'vite'
+import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 
 export default defineConfig({
   build: {
-    sourcemap: true
+    sourcemap: true,
   },
   css: {
-    devSourcemap: true
+    devSourcemap: true,
   },
   plugins: [
     sveltekit(),
@@ -16,7 +16,7 @@ export default defineConfig({
     SvelteKitPWA({
       devOptions: {
         enabled: true,
-        type: 'module'
+        type: 'module',
       },
       manifest: {
         name: "RossTheRoss' Personal Tools",
@@ -28,22 +28,22 @@ export default defineConfig({
             src: '/favicon.svg',
             sizes: 'any',
             type: 'image/svg+xml',
-            purpose: 'maskable'
+            purpose: 'maskable',
           },
           {
             src: '/pwa-512x512.png',
             sizes: '512x512',
-            type: 'image/png'
-          }
+            type: 'image/png',
+          },
         ],
         id: '/',
-        theme_color: '#000000'
+        theme_color: '#000000',
       },
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['client/**/*.{js,css,html,svg}'],
-        cleanupOutdatedCaches: true
-      }
-    })
-  ]
-});
+        cleanupOutdatedCaches: true,
+      },
+    }),
+  ],
+})

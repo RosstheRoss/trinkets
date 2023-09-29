@@ -1,34 +1,34 @@
 <script lang="ts">
-  import Navigation from '$lib/svelte/Navigation.svelte';
-  import Icon from '@iconify/svelte';
-  import menuIcon from '@iconify/icons-carbon/menu';
+  import Navigation from '$lib/svelte/Navigation.svelte'
+  import Icon from '@iconify/svelte'
+  import menuIcon from '@iconify/icons-carbon/menu'
   import {
     AppBar,
     AppShell,
     Drawer,
     Toast,
     getDrawerStore,
-    initializeStores
-  } from '@skeletonlabs/skeleton';
-  import { pwaInfo } from 'virtual:pwa-info';
-  import '../app.postcss';
+    initializeStores,
+  } from '@skeletonlabs/skeleton'
+  import { pwaInfo } from 'virtual:pwa-info'
+  import '../app.postcss'
 
   // Floating UI for Popups
   // import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
   // import { storePopup } from '@skeletonlabs/skeleton';
   // storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
-  initializeStores();
+  initializeStores()
 
-  const drawerStore = getDrawerStore();
+  const drawerStore = getDrawerStore()
 
   function drawerOpen() {
     drawerStore.open({
-      width: 'w-[80px]'
-    });
+      width: 'w-[80px]',
+    })
   }
 
-  $: webManifestLink = pwaInfo ? pwaInfo.webManifest.linkTag : '';
+  $: webManifestLink = pwaInfo ? pwaInfo.webManifest.linkTag : ''
 </script>
 
 <svelte:head>

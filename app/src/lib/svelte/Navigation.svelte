@@ -1,22 +1,22 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { page } from '$app/stores'
 
-  import Icon from '@iconify/svelte';
-  import homeIcon from '@iconify/icons-carbon/home';
-  import logoGithub from '@iconify/icons-carbon/logo-github';
-  import menuIcon from '@iconify/icons-carbon/menu';
-  import pageBreak from '@iconify/icons-carbon/page-break';
+  import Icon from '@iconify/svelte'
+  import homeIcon from '@iconify/icons-carbon/home'
+  import logoGithub from '@iconify/icons-carbon/logo-github'
+  import menuIcon from '@iconify/icons-carbon/menu'
+  import pageBreak from '@iconify/icons-carbon/page-break'
 
-  import { AppRail, AppRailAnchor, getDrawerStore } from '@skeletonlabs/skeleton';
+  import { AppRail, AppRailAnchor, getDrawerStore } from '@skeletonlabs/skeleton'
 
-  const drawerStore = getDrawerStore();
+  const drawerStore = getDrawerStore()
 
   function drawerClose(): void {
-    drawerStore.close();
+    drawerStore.close()
   }
 
   // Hamburgers
-  export let menu = false;
+  export let menu = false
 </script>
 
 <AppRail>

@@ -1,36 +1,36 @@
 <script lang="ts">
-  import saveFile from '$lib/ts/download';
-  import type { TruncateRequest, TruncateResponse } from '$lib/types/truncate-worker';
-  import Icon from '@iconify/svelte';
-  import fileStorage from '@iconify/icons-carbon/file-storage';
-  import { FileDropzone, ProgressBar } from '@skeletonlabs/skeleton';
-  import { onDestroy, onMount } from 'svelte';
+  import saveFile from '$lib/ts/download'
+  import type { TruncateRequest, TruncateResponse } from '$lib/types/truncate-worker'
+  import Icon from '@iconify/svelte'
+  import fileStorage from '@iconify/icons-carbon/file-storage'
+  import { FileDropzone, ProgressBar } from '@skeletonlabs/skeleton'
+  import { onDestroy, onMount } from 'svelte'
 
-  let disableInput = false;
-  let files: FileList;
-  let form: HTMLFormElement;
-  let worker: Worker;
-  $: truncateTo = 1;
-  let originalName: string;
+  let disableInput = false
+  let files: FileList
+  let form: HTMLFormElement
+  let worker: Worker
+  $: truncateTo = 1
+  let originalName: string
 
   function onUpload() {
-    disableInput = true;
-    originalName = files[0].name;
+    disableInput = true
+    originalName = files[0].name
     worker.postMessage({
       file: files[0],
-      size: truncateTo
-    } as TruncateRequest);
+      size: truncateTo,
+    } as TruncateRequest)
   }
 
   onMount(async () => {
-    worker = new Worker(new URL('$lib/ts/truncate.worker.ts', import.meta.url), { type: 'module' });
+    worker = new Worker(new URL('$lib/ts/truncate.worker.ts', import.meta.url), { type: 'module' })
     worker.onmessage = async (e: MessageEvent<TruncateResponse>) => {
-      await saveFile(e.data.file, `trunc-${originalName}`).catch((e) => console.error(e));
-      disableInput = false;
-      form.reset();
-      truncateTo = 1;
-    };
-  });
+      await saveFile(e.data.file, `trunc-${originalName}`).catch((e) => console.error(e))
+      disableInput = false
+      form.reset()
+      truncateTo = 1
+    }
+  })
 
   onDestroy(() => {
     worker?.terminate()
@@ -60,7 +60,7 @@
           >
             <svelte:fragment slot="lead">
               <div class="flex justify-center items-center">
-                <Icon icon={fileStorage}  width="50" />
+                <Icon icon={fileStorage} width="50" />
               </div>
             </svelte:fragment>
             <svelte:fragment slot="meta">Drop a file here to truncate it.</svelte:fragment>
