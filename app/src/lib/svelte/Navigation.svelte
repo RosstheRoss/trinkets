@@ -24,7 +24,7 @@
 <AppRail>
   <svelte:fragment slot="lead">
     {#if menu}
-      <AppRailAnchor on:click={drawerClose} title="Close Menu" value={0}>
+      <AppRailAnchor on:click={drawerClose} title="Close Menu" value={0} href="javascript:;">
         <svelte:fragment slot="lead">
           <Icon icon={menuIcon} width="25" />
         </svelte:fragment>
