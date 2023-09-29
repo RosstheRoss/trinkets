@@ -33,7 +33,7 @@
   });
 
   onDestroy(() => {
-    worker.terminate()
+    worker?.terminate()
   })
 </script>
 
