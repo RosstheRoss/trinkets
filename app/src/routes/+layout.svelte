@@ -3,17 +3,14 @@
   import Icon from '@iconify/svelte';
   import menuIcon from '@iconify/icons-carbon/menu';
   import {
-      AppBar,
-      AppShell,
-      Drawer,
-      Toast,
-      getDrawerStore,
-      getToastStore,
-      initializeStores
+    AppBar,
+    AppShell,
+    Drawer,
+    Toast,
+    getDrawerStore,
+    initializeStores
   } from '@skeletonlabs/skeleton';
-  import { onMount } from 'svelte';
   import { pwaInfo } from 'virtual:pwa-info';
-  import { useRegisterSW } from 'virtual:pwa-register/svelte';
   import '../app.postcss';
 
   // Floating UI for Popups
@@ -24,35 +21,12 @@
   initializeStores();
 
   const drawerStore = getDrawerStore();
-  const toastStore = getToastStore();
 
   function drawerOpen() {
     drawerStore.open({
       width: 'w-[80px]'
     });
   }
-
-  onMount(async () => {
-    if (pwaInfo) {
-      useRegisterSW({
-        immediate: true,
-        onRegistered(r) {
-          console.log(`SW Registered: ${r?.active?.scriptURL}`);
-        },
-        onRegisterError(error: Error) {
-          console.error('SW registration error', error);
-        },
-        onOfflineReady() {
-          toastStore.trigger({
-            background: 'variant-filled-success',
-            hideDismiss: true,
-            message: 'Now ready for offline use!',
-            timeout: 5000
-          });
-        }
-      });
-    }
-  });
 
   $: webManifestLink = pwaInfo ? pwaInfo.webManifest.linkTag : '';
 </script>
@@ -76,7 +50,7 @@
       <svelte:fragment slot="lead">
         <div class="flex items-center">
           <button class="md:hidden btn btn-sm mr-4" on:click={drawerOpen}>
-            <Icon icon={menuIcon} width=25 />
+            <Icon icon={menuIcon} width="25" />
           </button>
           <strong class="text-xl uppercase">Nothing</strong>
         </div>
@@ -89,3 +63,7 @@
   <!-- Page Route Content -->
   <slot />
 </AppShell>
+
+{#await import('$lib/svelte/ReloadPrompt.svelte') then { default: ReloadPrompt }}
+  <ReloadPrompt />
+{/await}
