@@ -1,6 +1,7 @@
 <script lang="ts">
   import Navigation from '$lib/svelte/Navigation.svelte';
   import Icon from '@iconify/svelte';
+  import menuIcon from '@iconify/icons-carbon/menu';
   import {
       AppBar,
       AppShell,
@@ -62,20 +63,20 @@
 </svelte:head>
 
 <Drawer>
-  <Navigation />
+  <Navigation menu />
 </Drawer>
 
 <Toast position="br" />
 
 <!-- App Shell -->
-<AppShell slotSidebarLeft="w-0 lg:w-64">
+<AppShell slotSidebarLeft="w-0 md:w-20">
   <svelte:fragment slot="header">
     <!-- App Bar -->
     <AppBar>
       <svelte:fragment slot="lead">
         <div class="flex items-center">
-          <button class="lg:hidden btn btn-sm mr-4" on:click={drawerOpen}>
-            <Icon icon="carbon:menu" width=25 />
+          <button class="md:hidden btn btn-sm mr-4" on:click={drawerOpen}>
+            <Icon icon={menuIcon} width=25 />
           </button>
           <strong class="text-xl uppercase">Nothing</strong>
         </div>
