@@ -2,6 +2,7 @@
   import saveFile from '$lib/ts/download';
   import type { TruncateRequest, TruncateResponse } from '$lib/types/truncate-worker';
   import Icon from '@iconify/svelte';
+  import fileStorage from '@iconify/icons-carbon/file-storage';
   import { FileDropzone, ProgressBar } from '@skeletonlabs/skeleton';
   import { onMount } from 'svelte';
 
@@ -55,7 +56,7 @@
           >
             <svelte:fragment slot="lead">
               <div class="flex justify-center items-center">
-                <Icon icon="carbon:file-storage" width="50" />
+                <Icon icon={fileStorage}  width="50" />
               </div>
             </svelte:fragment>
             <svelte:fragment slot="meta">Drop a file here to truncate it.</svelte:fragment>
