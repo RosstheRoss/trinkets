@@ -49,7 +49,7 @@
     <AppBar>
       <svelte:fragment slot="lead">
         <div class="flex items-center">
-          <button class="md:hidden btn btn-sm mr-4" on:click={drawerOpen} title="Menu">
+          <button class="md:hidden btn btn-sm mr-4" on:click={drawerOpen} title="Menu" type="button">
             <Icon icon={menuIcon} width="25" />
           </button>
           <strong class="text-xl uppercase">Nothing</strong>
