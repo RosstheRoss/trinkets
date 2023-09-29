@@ -4,7 +4,7 @@
   import Icon from '@iconify/svelte';
   import fileStorage from '@iconify/icons-carbon/file-storage';
   import { FileDropzone, ProgressBar } from '@skeletonlabs/skeleton';
-  import { onMount } from 'svelte';
+  import { onDestroy, onMount } from 'svelte';
 
   let disableInput = false;
   let files: FileList;
@@ -31,6 +31,10 @@
       truncateTo = 1;
     };
   });
+
+  onDestroy(() => {
+    worker.terminate()
+  })
 </script>
 
 <svelte:head>
