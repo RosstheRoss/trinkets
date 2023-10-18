@@ -40,7 +40,7 @@ export default defineConfig({
         id: '/',
         theme_color: '#000000',
       },
-      registerType: 'autoUpdate',
+      registerType: 'prompt',
       workbox: {
         globPatterns: ['client/**/*.{js,css,html,svg}'],
         cleanupOutdatedCaches: true,
