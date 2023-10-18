@@ -6,8 +6,7 @@
   "devDependencies": {
     "syncpack": "11.2.1"
   },
-  "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "main": "index.js",
   "private": true,
   "scripts": {
