@@ -26,18 +26,18 @@ export default defineConfig({
         display_override: ['window-controls-overlay', 'standalone', 'minimal-ui'],
         icons: [
           {
-            src: '/favicon.svg',
+            src: 'favicon.svg',
             sizes: 'any',
             type: 'image/svg+xml',
             purpose: 'maskable',
           },
           {
-            src: '/pwa-512x512.png',
+            src: 'pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
         ],
-        id: '/',
+        id: '.',
         theme_color: '#000000',
       },
       registerType: 'prompt',

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores'
+  import { base } from "$app/paths";
 
   import Icon from '@iconify/svelte'
   import homeIcon from '@iconify/icons-carbon/home'
@@ -33,8 +34,8 @@
     {/if}
   </svelte:fragment>
   <AppRailAnchor
-    href="/"
-    selected={$page.url.pathname === '/'}
+    href="{base}/"
+    selected={$page.url.pathname === base + '/'}
     on:click={drawerClose}
     title="Homepage"
   >
@@ -44,8 +45,8 @@
     Home!
   </AppRailAnchor>
   <AppRailAnchor
-    href="/truncate"
-    selected={$page.url.pathname === '/truncate'}
+    href="{base}/truncate"
+    selected={$page.url.pathname === base + '/truncate'}
     on:click={drawerClose}
     title="Truncate Files"
   >
@@ -56,7 +57,7 @@
   </AppRailAnchor>
   <svelte:fragment slot="trail">
     <AppRailAnchor
-      href="https://github.com/rosstheross/rosstheross.github.io"
+      href="https://github.com/rosstheross/random-stuff"
       rel="noreferrer"
       on:click={drawerClose}
       title="Source Code"
