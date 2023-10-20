@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Navigation from '$lib/svelte/Navigation.svelte'
+  import Navigation from '$lib/components/Navigation.svelte'
   import Icon from '@iconify/svelte'
   import menuIcon from '@iconify/icons-carbon/menu'
   import {
@@ -28,12 +28,12 @@
     })
   }
 
-  $: webManifestLink = pwaInfo ? pwaInfo.webManifest.linkTag : ''
+  $: webManifest = pwaInfo ? pwaInfo.webManifest.linkTag : ''
 </script>
 
 <svelte:head>
   <!-- eslint-disable-next-line svelte/no-at-html-tags VitePWA can probably be trusted -->
-  {@html webManifestLink}
+  {@html webManifest}
 </svelte:head>
 
 <Drawer>
@@ -64,6 +64,6 @@
   <slot />
 </AppShell>
 
-{#await import('$lib/svelte/ReloadPrompt.svelte') then { default: ReloadPrompt }}
+{#await import('$lib/components/ReloadPrompt.svelte') then { default: ReloadPrompt }}
   <ReloadPrompt />
 {/await}
