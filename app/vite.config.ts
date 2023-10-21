@@ -38,6 +38,7 @@ export default defineConfig({
           },
         ],
         id: 'random-dumping-ground',
+        start_url: '.',
         theme_color: '#000000',
       },
       registerType: 'prompt',
