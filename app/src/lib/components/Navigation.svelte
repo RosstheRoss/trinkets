@@ -34,7 +34,7 @@
     {/if}
   </svelte:fragment>
   <AppRailAnchor
-    href="{base}/"
+    href="{base}"
     selected={$page.url.pathname === base}
     on:click={drawerClose}
     title="Homepage"
