@@ -37,7 +37,7 @@ export default defineConfig({
             type: 'image/png',
           },
         ],
-        id: '.',
+        id: 'random-dumping-ground',
         theme_color: '#000000',
       },
       registerType: 'prompt',
