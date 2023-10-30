@@ -6,6 +6,7 @@
     AppBar,
     AppShell,
     Drawer,
+    LightSwitch,
     Toast,
     getDrawerStore,
     initializeStores,
@@ -54,6 +55,9 @@
           </button>
           <strong class="text-xl uppercase">Nothing</strong>
         </div>
+      </svelte:fragment>
+      <svelte:fragment slot="trail">
+        <LightSwitch />
       </svelte:fragment>
     </AppBar>
   </svelte:fragment>
