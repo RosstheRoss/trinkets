@@ -55,8 +55,8 @@ importers:
         specifier: 20.8.10
         version: 20.8.10
       '@types/wicg-file-system-access':
-        specifier: 2023.10.2
-        version: 2023.10.2
+        specifier: 2023.10.4
+        version: 2023.10.4
       '@typescript-eslint/eslint-plugin':
         specifier: 6.9.1
         version: 6.9.1(@typescript-eslint/parser@6.9.1)(eslint@8.53.0)(typescript@5.2.2)
@@ -1921,8 +1921,8 @@ packages:
     resolution: {integrity: sha512-IDaobHimLQhjwsQ/NMwRVfa/yL7L/wriQPMhw1ZJall0KX6E1oxk29XMDeilW5qTIg5aoiqf5Udy8U/51aNoQQ==}
     dev: true
 
-  /@types/wicg-file-system-access@2023.10.2:
-    resolution: {integrity: sha512-nSiK8qt0O7sQmDcW3HYfvya7GDoD6ipgdcUFzk3QN+UBIqXeNg38Nh6VnKv7EIPfkVETRiquyMskCbpxUzgX1Q==}
+  /@types/wicg-file-system-access@2023.10.4:
+    resolution: {integrity: sha512-ewOj7hWhsUTS2+aY6zY+7BwlgqGBj5ZXxKuHt3TAWpIJH0bDW/6bO1N1SdUDAzV8r0Nc+/ZtpAEETYTwrehBMw==}
     dev: true
 
   /@typescript-eslint/eslint-plugin@6.9.1(@typescript-eslint/parser@6.9.1)(eslint@8.53.0)(typescript@5.2.2):
