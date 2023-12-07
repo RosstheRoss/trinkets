@@ -10,7 +10,7 @@
     "@iconify/icons-carbon": "1.2.20",
     "@iconify/svelte": "3.1.4",
     "@skeletonlabs/skeleton": "2.6.0",
-    "@skeletonlabs/tw-plugin": "0.2.4",
+    "@skeletonlabs/tw-plugin": "0.3.0",
     "@sveltejs/adapter-auto": "2.1.1",
     "@sveltejs/adapter-static": "2.0.3",
     "@sveltejs/kit": "1.27.7",
