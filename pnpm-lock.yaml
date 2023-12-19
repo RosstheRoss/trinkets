@@ -25,8 +25,8 @@ importers:
         specifier: 1.2.20
         version: 1.2.20
       '@iconify/svelte':
-        specifier: 3.1.4
-        version: 3.1.4(svelte@4.2.8)
+        specifier: 3.1.6
+        version: 3.1.6(svelte@4.2.8)
       '@skeletonlabs/skeleton':
         specifier: 2.6.0
         version: 2.6.0(svelte@4.2.8)
@@ -1615,8 +1615,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
-  /@iconify/svelte@3.1.4(svelte@4.2.8):
-    resolution: {integrity: sha512-YDwQlN46ka8KPRayDb7TivmkAPizfTXi6BSRNqa1IV0+byA907n8JcgQafA7FD//pW5XCuuAhVx6uRbKTo+CfA==}
+  /@iconify/svelte@3.1.6(svelte@4.2.8):
+    resolution: {integrity: sha512-yLSrlkOx5J6xXU5GDLPBV/MdVBVEZhd36onfqSbxQobp1XBoWQbMPLNZyCAmTKCPnmzXSowGy79agl8FQ3kj6A==}
     peerDependencies:
       svelte: '*'
     dependencies:
