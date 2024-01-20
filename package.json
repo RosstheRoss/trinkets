@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Matt Strapp <matt@mattstrapp.net>",
   "devDependencies": {
-    "syncpack": "11.2.1"
+    "syncpack": "12.3.0"
   },
   "license": "MIT",
   "main": "index.js",
