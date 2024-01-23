@@ -37,7 +37,7 @@ export default defineConfig({
             type: 'image/png',
           },
         ],
-        id: 'random-dumping-ground',
+        id: 'trinkets',
         start_url: '.',
         theme_color: '#000000',
       },
