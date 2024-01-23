@@ -2,8 +2,7 @@ name: Deploy SvelteKit page to GitHub Pages
 
 on:
   push:
-    branches:
-    - 'master'
+  pull_request:
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -37,13 +36,16 @@ jobs:
         run: pnpm -r install
       - name: Build the site
         run: pnpm -F website build
+
       - name: Upload Artifacts
+        if: ${{ github.ref == 'refs/heads/master' }}
         uses: actions/upload-pages-artifact@v2
         with:
           # this should match the `pages` option in your adapter-static options
           path: 'app/build/'
 
   deploy:
+    if: ${{ github.ref == 'refs/heads/master' }}
     needs: build
     runs-on: ubuntu-latest
     environment:
