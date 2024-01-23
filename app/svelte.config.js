@@ -11,7 +11,7 @@ const config = {
   kit: {
     adapter: adapter(),
     paths: {
-      base: process.env.NODE_ENV === "production" ? "/random-stuff" : "",
+      base: process.env.NODE_ENV === "production" ? "/trinkets" : "",
     }
   },
 }
