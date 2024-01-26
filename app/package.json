@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "Matt Strapp <matt@mattstrapp.net>",
   "dependencies": {
-    "@floating-ui/dom": "1.5.4"
+    "@floating-ui/dom": "1.6.0"
   },
   "devDependencies": {
     "@iconify/icons-carbon": "1.2.20",
