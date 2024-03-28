@@ -32,7 +32,7 @@ importers:
         version: 2.9.0(svelte@4.2.12)
       '@skeletonlabs/tw-plugin':
         specifier: 0.3.1
-        version: 0.3.1(tailwindcss@3.4.2)
+        version: 0.3.1(tailwindcss@3.4.3)
       '@sveltejs/adapter-auto':
         specifier: 3.2.0
         version: 3.2.0(@sveltejs/kit@2.5.4)
@@ -47,10 +47,10 @@ importers:
         version: 3.0.2(svelte@4.2.12)(vite@5.2.6)
       '@tailwindcss/forms':
         specifier: 0.5.7
-        version: 0.5.7(tailwindcss@3.4.2)
+        version: 0.5.7(tailwindcss@3.4.3)
       '@tailwindcss/typography':
         specifier: 0.5.12
-        version: 0.5.12(tailwindcss@3.4.2)
+        version: 0.5.12(tailwindcss@3.4.3)
       '@types/html-minifier-terser':
         specifier: 7.0.2
         version: 7.0.2
@@ -103,8 +103,8 @@ importers:
         specifier: 3.6.8
         version: 3.6.8(@babel/core@7.23.7)(postcss@8.4.38)(svelte@4.2.12)
       tailwindcss:
-        specifier: 3.4.2
-        version: 3.4.2
+        specifier: 3.4.3
+        version: 3.4.3
       tslib:
         specifier: 2.6.2
         version: 2.6.2
@@ -1891,12 +1891,12 @@ packages:
       svelte: 4.2.12
     dev: true
 
-  /@skeletonlabs/tw-plugin@0.3.1(tailwindcss@3.4.2):
+  /@skeletonlabs/tw-plugin@0.3.1(tailwindcss@3.4.3):
     resolution: {integrity: sha512-DjjeOHN3HhFQf6gYPT2MUZMkIdw1jeB9mbuKC8etQxUlOR4XitfC7hssRWFJ8RJsvrrN0myCBbdWkVG1JVA96g==}
     peerDependencies:
       tailwindcss: '>=3.0.0'
     dependencies:
-      tailwindcss: 3.4.2
+      tailwindcss: 3.4.3
     dev: true
 
   /@surma/rollup-plugin-off-main-thread@2.2.3:
@@ -1988,16 +1988,16 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/forms@0.5.7(tailwindcss@3.4.2):
+  /@tailwindcss/forms@0.5.7(tailwindcss@3.4.3):
     resolution: {integrity: sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.4.2
+      tailwindcss: 3.4.3
     dev: true
 
-  /@tailwindcss/typography@0.5.12(tailwindcss@3.4.2):
+  /@tailwindcss/typography@0.5.12(tailwindcss@3.4.3):
     resolution: {integrity: sha512-CNwpBpconcP7ppxmuq3qvaCxiRWnbhANpY/ruH4L5qs2GCiVDJXde/pjj2HWPV1+Q4G9+V/etrwUYopdcjAlyg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -2006,7 +2006,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.2
+      tailwindcss: 3.4.3
     dev: true
 
   /@types/cookie@0.6.0:
@@ -5001,8 +5001,8 @@ packages:
       - typescript
     dev: true
 
-  /tailwindcss@3.4.2:
-    resolution: {integrity: sha512-1kIzVecynNKMhhX8mPTOwTkkVHupUTMbEvk4n1ByxdM8sQTJ8fE41Y4TdORG6GmiVXHhfZ/++0hiIFJFwfadsA==}
+  /tailwindcss@3.4.3:
+    resolution: {integrity: sha512-U7sxQk/n397Bmx4JHbJx/iSOOv5G+II3f1kpLpY2QeUv5DcPdcTsYLlusZfq1NthHS1c1cZoyFmmkex1rzke0A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
