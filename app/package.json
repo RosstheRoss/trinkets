@@ -18,7 +18,7 @@
     "@tailwindcss/forms": "0.5.7",
     "@tailwindcss/typography": "0.5.12",
     "@types/html-minifier-terser": "7.0.2",
-    "@types/node": "20.12.4",
+    "@types/node": "20.12.5",
     "@types/wicg-file-system-access": "2023.10.5",
     "@typescript-eslint/eslint-plugin": "7.5.0",
     "@typescript-eslint/parser": "7.5.0",
