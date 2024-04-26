@@ -39,7 +39,7 @@
     "typescript": "5.4.5",
     "vite": "5.2.10",
     "vite-plugin-pwa": "0.19.8",
-    "vite-plugin-tailwind-purgecss": "0.3.2"
+    "vite-plugin-tailwind-purgecss": "0.3.3"
   },
   "private": true,
   "scripts": {
