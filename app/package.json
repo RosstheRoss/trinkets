@@ -7,8 +7,6 @@
     "@floating-ui/dom": "1.6.5"
   },
   "devDependencies": {
-    "@iconify/icons-carbon": "1.2.20",
-    "@iconify/svelte": "4.0.2",
     "@skeletonlabs/skeleton": "2.10.0",
     "@skeletonlabs/tw-plugin": "0.4.0",
     "@sveltejs/adapter-auto": "3.2.0",
@@ -29,6 +27,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-svelte": "2.39.0",
     "html-minifier-terser": "7.2.0",
+    "iconify-icon": "^2.1.0",
     "postcss": "8.4.38",
     "prettier": "3.2.5",
     "prettier-plugin-svelte": "3.2.3",
