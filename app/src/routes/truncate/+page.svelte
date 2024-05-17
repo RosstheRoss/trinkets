@@ -1,8 +1,7 @@
 <script lang="ts">
   import saveFile from '$lib/ts/download'
   import type { TruncateRequest, TruncateResponse } from '$lib/types/truncate-worker'
-  import Icon from '@iconify/svelte'
-  import fileStorage from '@iconify/icons-carbon/file-storage'
+  import 'iconify-icon'
   import { FileDropzone, ProgressBar } from '@skeletonlabs/skeleton'
   import { onDestroy, onMount } from 'svelte'
 
@@ -43,7 +42,13 @@
 
 <div class="container h-full mx-auto flex justify-center items-center">
   <div class="space-y-10 text-center flex flex-col items-center">
-    <form bind:this={form} on:submit|preventDefault={onUpload} method="POST" action="?/TODO" enctype="multipart/form-data">
+    <form
+      bind:this={form}
+      on:submit|preventDefault={onUpload}
+      method="POST"
+      action="?/TODO"
+      enctype="multipart/form-data"
+    >
       <noscript>
         <h3 class="h3">You need JavaScript to use this page, for now ;)</h3>
         <br />
@@ -60,7 +65,7 @@
           >
             <svelte:fragment slot="lead">
               <div class="flex justify-center items-center">
-                <Icon icon={fileStorage} width="50" />
+                <iconify-icon icon="carbon:file-storage" width="50" />
               </div>
             </svelte:fragment>
             <svelte:fragment slot="meta">Drop a file here to truncate it.</svelte:fragment>

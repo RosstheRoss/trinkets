@@ -1,7 +1,6 @@
 <script lang="ts">
   import Navigation from '$lib/components/Navigation.svelte'
-  import Icon from '@iconify/svelte'
-  import menuIcon from '@iconify/icons-carbon/menu'
+  import "iconify-icon"
   import {
     AppBar,
     AppShell,
@@ -51,7 +50,7 @@
       <svelte:fragment slot="lead">
         <div class="flex items-center">
           <button class="md:hidden btn btn-sm mr-4" on:click={drawerOpen} title="Menu" type="button">
-            <Icon icon={menuIcon} width="25" />
+            <iconify-icon icon="carbon:menu" width="25" />
           </button>
           <strong class="text-xl uppercase">Nothing</strong>
         </div>
