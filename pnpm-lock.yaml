@@ -12,8 +12,8 @@ importers:
   .:
     devDependencies:
       syncpack:
-        specifier: 12.3.2
-        version: 12.3.2
+        specifier: 12.3.3
+        version: 12.3.3
 
   app:
     dependencies:
@@ -5131,8 +5131,8 @@ packages:
       periscopic: 3.1.0
     dev: true
 
-  /syncpack@12.3.2:
-    resolution: {integrity: sha512-ePvaDfasxF8mwaPItN6urmABaH6FPT3/vJU+2DHt24j8EIKjgz6NCxXDx2bTXJXZ4QcEFwvoiu3EqaJsVrHvUg==}
+  /syncpack@12.3.3:
+    resolution: {integrity: sha512-r154Rk8YtJA0My8Nu5v4e58n3y85atG4WlxekTQ/DT4toqiMtprqn5LrHuNVAhbpsOfUHPv6EFMj9k+FdDvgDA==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
