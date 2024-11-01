@@ -21,7 +21,7 @@ export default defineConfig({
       manifest: {
         name: "RossTheRoss' Personal Tools",
         short_name: 'Random Dumping Ground',
-        description: 'A collection of tools I\'ve made',
+        description: "A collection of tools I've made",
         display: 'fullscreen',
         display_override: ['window-controls-overlay', 'standalone', 'minimal-ui'],
         icons: [

@@ -21,6 +21,9 @@ importers:
         specifier: 1.6.12
         version: 1.6.12
     devDependencies:
+      '@locusts/svelte':
+        specifier: ^0.0.1
+        version: 0.0.1(svelte@5.1.7)
       '@skeletonlabs/skeleton':
         specifier: 2.10.3
         version: 2.10.3(svelte@5.1.7)
@@ -868,6 +871,11 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@locusts/svelte@0.0.1':
+    resolution: {integrity: sha512-xdUR49bIVcAGovy5BX8Qq5Yd5Au7I36J/YXWFzwRR5ICnl/xOFXOXERCS4PvjTdZ2PWat5+S9YYNSOv+7lF74Q==}
+    peerDependencies:
+      svelte: ^5.0.0
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -3920,6 +3928,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@locusts/svelte@0.0.1(svelte@5.1.7)':
+    dependencies:
+      svelte: 5.1.7
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

@@ -1,8 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores'
-  import { base } from "$app/paths";
+  import { base } from '$app/paths'
 
-  import "iconify-icon";
+  import 'iconify-icon'
 
   import { AppRail, AppRailAnchor, getDrawerStore } from '@skeletonlabs/skeleton'
 
@@ -23,20 +23,20 @@
     {#if menu}
       <AppRailAnchor on:click={drawerClose} title="Close Menu" value={0} href="javascript:;">
         <svelte:fragment slot="lead">
-          <iconify-icon icon="carbon:menu" width="25" />
+          <iconify-icon icon="carbon:menu" width="25"></iconify-icon>
         </svelte:fragment>
         Close Menu
       </AppRailAnchor>
     {/if}
   </svelte:fragment>
   <AppRailAnchor
-    href="{base}"
+    href={base}
     selected={$page.url.pathname === base}
     on:click={drawerClose}
     title="Homepage"
   >
     <svelte:fragment slot="lead">
-      <iconify-icon icon="carbon:home" width="35" />
+      <iconify-icon icon="carbon:home" width="35"></iconify-icon>
     </svelte:fragment>
     Home!
   </AppRailAnchor>
@@ -47,7 +47,7 @@
     title="Truncate Files"
   >
     <svelte:fragment slot="lead">
-      <iconify-icon icon="carbon:page-break" width="35" />
+      <iconify-icon icon="carbon:page-break" width="35"></iconify-icon>
     </svelte:fragment>
     Truncate!
   </AppRailAnchor>
@@ -59,7 +59,7 @@
       title="Source Code"
     >
       <svelte:fragment slot="lead">
-        <iconify-icon icon="carbon:logo-github" width="35" />
+        <iconify-icon icon="carbon:logo-github" width="35"></iconify-icon>
       </svelte:fragment>
       Source!
     </AppRailAnchor>

@@ -65,7 +65,7 @@
           >
             <svelte:fragment slot="lead">
               <div class="flex justify-center items-center">
-                <iconify-icon icon="carbon:file-storage" width="50" />
+                <iconify-icon icon="carbon:file-storage" width="50"></iconify-icon>
               </div>
             </svelte:fragment>
             <svelte:fragment slot="meta">Drop a file here to truncate it.</svelte:fragment>

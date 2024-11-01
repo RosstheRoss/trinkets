@@ -1,6 +1,7 @@
 <script lang="ts">
   import Navigation from '$lib/components/Navigation.svelte'
-  import "iconify-icon"
+  import { Locusts } from '@locusts/svelte'
+  import 'iconify-icon'
   import {
     AppBar,
     AppShell,
@@ -49,9 +50,16 @@
     <AppBar>
       <svelte:fragment slot="lead">
         <div class="flex items-center">
-          <button class="md:hidden btn btn-sm mr-4" on:click={drawerOpen} title="Menu" type="button">
-            <iconify-icon icon="carbon:menu" width="25" />
+          <button
+            class="md:hidden btn btn-sm mr-4"
+            on:click={drawerOpen}
+            title="Menu"
+            type="button"
+            aria-label="Menu"
+          >
+            <iconify-icon icon="carbon:menu" width="25"></iconify-icon>
           </button>
+          <Locusts />
           <strong class="text-xl uppercase">Nothing</strong>
         </div>
       </svelte:fragment>
