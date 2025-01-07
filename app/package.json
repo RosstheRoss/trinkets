@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "Matt Strapp <matt@mattstrapp.net>",
   "dependencies": {
-    "@floating-ui/dom": "1.6.12"
+    "@floating-ui/dom": "1.6.13"
   },
   "devDependencies": {
     "@locusts/svelte": "^0.0.1",
@@ -12,15 +12,15 @@
     "@skeletonlabs/tw-plugin": "0.4.0",
     "@sveltejs/adapter-auto": "3.3.1",
     "@sveltejs/adapter-static": "3.0.8",
-    "@sveltejs/kit": "2.15.1",
+    "@sveltejs/kit": "2.15.2",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
-    "@tailwindcss/forms": "0.5.9",
-    "@tailwindcss/typography": "0.5.15",
+    "@tailwindcss/forms": "0.5.10",
+    "@tailwindcss/typography": "0.5.16",
     "@types/html-minifier-terser": "7.0.2",
     "@types/node": "22.10.5",
     "@types/wicg-file-system-access": "2023.10.5",
-    "@typescript-eslint/eslint-plugin": "8.19.0",
-    "@typescript-eslint/parser": "8.19.0",
+    "@typescript-eslint/eslint-plugin": "8.19.1",
+    "@typescript-eslint/parser": "8.19.1",
     "@vite-pwa/sveltekit": "0.6.7",
     "autoprefixer": "10.4.20",
     "crc": "4.3.2",
@@ -32,7 +32,7 @@
     "postcss": "8.4.49",
     "prettier": "3.4.2",
     "prettier-plugin-svelte": "3.3.2",
-    "svelte": "5.16.2",
+    "svelte": "5.16.5",
     "svelte-check": "4.1.1",
     "tailwindcss": "3.4.17",
     "tslib": "2.8.1",
